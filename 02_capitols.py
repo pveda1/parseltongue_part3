@@ -28,9 +28,9 @@ while y != "Done":
         else:
             break 
 
-
-
-hello 
+#one letter typed will work; still have to stop infinite loop for other inputs
+#need to figure out how to compare input to value of key in dictionary
+#figure out how to split list into dictionary; right now, only split into individual words per capitol and state
 
             
 
