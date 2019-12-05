@@ -11,12 +11,11 @@ d = {'h': 2, "j": 3, "p": 6}
 #        count+=1
 
 y = input("Ready: ")
+for ch in d:
 while y != "Done":
-    for ch in d:
         if ch == y:
-            print(d[ch])
-            y = input("Ready: ")
-            break
+      	print(d[ch])
+       	y = input("Ready: ")
         elif d[ch] == y:
             print(ch)
             y = input("Ready: ")
@@ -24,9 +23,7 @@ while y != "Done":
         elif ch not in d:
             print("nil")
             y = input("Ready: ")
-            break 
-        else:
-            break 
+            break  
 
 #one letter typed will work; still have to stop infinite loop for other inputs
 #need to figure out how to compare input to value of key in dictionary
