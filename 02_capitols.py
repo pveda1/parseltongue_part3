@@ -12,10 +12,11 @@ d = {'h': 2, "j": 3, "p": 6}
 
 y = input("Ready: ")
 for ch in d:
-while y != "Done":
+    while y != "Done":
         if ch == y:
-      	print(d[ch])
-       	y = input("Ready: ")
+      	    print(d[ch])
+       	    y = input("Ready: ")
+	    break
         elif d[ch] == y:
             print(ch)
             y = input("Ready: ")
