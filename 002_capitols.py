@@ -1,7 +1,7 @@
 #f = open("/nfs/2019/p/pveda/Desktop/capitols.txt", 'r')
 #txt = f.read()
 #new_lst = txt.split(",")
-d = {'h': 2, "j": 3, "p": 6}
+d = {'h': 2, "j": 3, "p": 6, "k": 7}
 
 #count = 0
 
