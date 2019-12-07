@@ -1,34 +1,25 @@
-#f = open("/nfs/2019/p/pveda/Desktop/capitols.txt", 'r')
-#txt = f.read()
-#new_lst = txt.split(",")
-d = {'h': 2, "j": 3, "p": 6}
+f = open("/nfs/2019/p/pveda/Desktop/capitols.txt", 'r')
+txt = f.readlines()
+whole_txt = [x.strip() for x in txt]
+whole_txt = dict(map(lambda c: c.split(","), whole_txt))
 
-#count = 0
-
-#for x in new_lst:
-#    if count%2 == 0:
-#        d[x] = d[new_lst.index(x)+1]
-#        count+=1
+key_list = list(whole_txt.keys())
+value_list = list(whole_txt.values())
 
 y = input("Ready: ")
-for ch in d:
-    while y != "Done":
-        if ch == y:
-      	    print(d[ch])
-       	    y = input("Ready: ")
-	    break
-        elif d[ch] == y:
-            print(ch)
-            y = input("Ready: ")
-            break
-        elif ch not in d:
-            print("nil")
-            y = input("Ready: ")
-            break  
 
-#one letter typed will work; still have to stop infinite loop for other inputs
-#need to figure out how to compare input to value of key in dictionary
-#figure out how to split list into dictionary; right now, only split into individual words per capitol and state
+while y != "Done":
+    if y in key_list:
+        print(value_list[key_list.index(y)])
+        y = input("Ready: ")
+    elif y in value_list:
+        print(key_list[value_list.index(y)])
+        y = input("Ready: ")
+    else:
+        print("nil")
+        y = input("Ready: ")
+
+
 
             
 
